@@ -144,6 +144,7 @@ const Form = () => {
       mobile: false,
       address: false,
     });
+    setDisabled(false);
     alert("Form Resetted!!");
   };
 
@@ -215,7 +216,7 @@ const Form = () => {
             id="inputPassword"
             value={formData.password}
             onChange={(e) => changeHandler("password", e)}
-            placeholder="Must use abc, ABC, special characters"
+            placeholder="Must use abc, ABC, numeric or special characters"
           />
           {isDirty.password && errors.password && (
             <div className="feedback text-danger">{errors.password}</div>
